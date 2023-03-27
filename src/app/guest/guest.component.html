@@ -1,0 +1,573 @@
+<!-- main nav -->
+
+<div class="container-fluid fluid-nav">
+  <div class="container cnt-tnar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light tjnav-bar">
+      <a class="nav-logo">
+        <img src="../../../assets/img/techjobs_bgb.png">
+      </a>
+      <button class="navbar-toggler tnavbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fa fa-bars icn-res" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto tnav-left tn-nav">
+        </ul>
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 tnav-right tn-nav">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"></a>
+          </li>
+          <li class="nav-item dropdown">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-employers" href="#" tabindex="-1" aria-disabled="true" routerLink="/registerCompany">Đăng
+              kí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-employers" href="#" tabindex="-1" aria-disabled="true" routerLink="/login">Đăng
+              nhập</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- (end) main nav -->
+
+<div class="clearfix"></div>
+
+<!-- main banner -->
+
+<div class="container-fluid clear-left clear-right">
+  <div class="main-banner">
+    <div class="banner-image">
+      <img src="../../../assets/img/banner2.jpg" alt="banner-image">
+    </div>
+  </div>
+
+  <!-- (end) search section -->
+
+  <!-- job board & sidebar section  -->
+
+  <div class="container-fluid jb-wrapper">
+    <div class="container">
+      <div class="row">
+
+        <!-- job board -->
+
+        <div class="col-md-8 col-sm-12 col-12">
+          <div class="job-board-wrap">
+            <h2 class="widget-title">
+              <span>Việc làm mới nhất</span>
+            </h2>
+            <div class="job-group"
+                 *ngFor="let p of ListJobnew | paginate:{itemsPerPage: 6, currentPage: p, totalItems: total }">
+              <div class="job pagi">
+                <div class="job-content">
+                  <div class="job-logo">
+                    <a>
+                      <img src="{{p.avatar}}" class="job-logo-ima" alt="job-logo">
+                    </a>
+                  </div>
+                  <div class="job-desc">
+                    <div class="job-title">
+                      <a>{{p.title}} </a>
+                    </div>
+                    <div class="job-company">
+                      <a>{{p.short_name}}</a> | <a class="job-address"><i
+                      class="fa fa-map-marker" aria-hidden="true"></i>
+                      {{p.address}}</a>
+                    </div>
+                    <div class="job-inf">
+                      <div class="job-main-skill">
+                        <i class="fa fa-code" aria-hidden="true"></i> <a> {{p.codeJob}}</a>
+                      </div>
+                      <div class="job-salary">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <span class="salary-min">{{p.min}}<em class="salary-unit">$</em></span>
+                        <span class="salary-max">{{p.max}} <em class="salary-unit">$</em></span>
+                      </div>
+                      <div class="job-deadline">
+                        <span><i class="fa fa-clock-o"
+                                 aria-hidden="true"></i>  Hạn nộp: <strong>{{p.expired_date}}</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn-appl">
+                    <a class="btn btn-appl" (click)="showError()">Nộp đơn</a>
+                  </div>
+                </div>
+              </div>
+              <div class="readmorestyle-wrap">
+              </div>
+            </div>
+          </div>
+          <pagination-controls previousLabel="Trước" nextLabel="Sau" (pageChange)="pageChangeEvent($event)"
+                               style="text-align: center"></pagination-controls>
+        </div>
+
+        <!-- (end) job board -->
+
+        <!-- sidebar -->
+
+        <div class="col-md-4 col-sm-12 col-12 clear-left">
+          <div class="job-sidebar">
+            <h2 class="widget-title">
+              <span>Ngành Nghề</span>
+            </h2>
+            <div class="catelog-list">
+              <ul>
+                <li>
+                  <a>
+                <span class="cate-img">
+                  <em>Quản lý dự án</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Lập trình viên</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Nhân viên kiểm thử</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Kỹ sư cầu nối</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Kỹ sư thiết kế mạng</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Kỹ sư bảo trì hệ thống</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                  <span class="cate-img">
+                  <em>Nhân sự</em>
+                </span>
+                    <span class="cate-count"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-sidebar">
+            <div class="sb-banner">
+              <img src="../../../assets/img/ads1.jpg" class="advertisement">
+            </div>
+          </div>
+        </div>
+
+        <!-- (end) sidebar -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- (end) job board & sidebar section  -->
+
+  <div class="clearfix"></div>
+
+  <script>
+    $(document).ready(function () {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 2,
+            nav: true,
+            slideBy: 2,
+            dots: false
+          },
+          600: {
+            items: 4,
+            nav: false,
+            slideBy: 2,
+            dots: false
+          },
+          1000: {
+            items: 6,
+            nav: true,
+            loop: false,
+            slideBy: 2
+          }
+        }
+      });
+    })
+  </script>
+
+  <!-- (end) job board v2 -->
+
+  <div class="clearfix"></div>
+
+  <!-- (end) top employer -->
+
+  <div class="clearfix"></div>
+
+  <!-- all job -->
+
+  <div class="container-fluid">
+    <div class="container job-best-salary">
+      <div class="row">
+        <div class="col-md-12 job-board2-wrap-header job-best-salary-header">
+          <h3><i class="fa fa-briefcase pr-2"></i> Toàn bộ việc làm </h3>
+        </div>
+      </div>
+      <div class="row job-best-salary">
+        <div class="col-md-4 job-over-item" *ngFor="let p of ListAllJob">
+          <div class="job-inner-over-item">
+            <a>
+              <div class="thumbnail">
+                <img src="{{p.avatar}}" alt="company logo image">
+              </div>
+              <div class="content">
+                <div class="job-name">
+                  {{p.title}} (${{p.min}}-${{p.max}})
+                </div>
+                <a class="company">
+                  {{p.short_name}}
+                </a>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="home-ads">
+            <a>
+              <img src="../../../assets/img/hna.jpg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- job-best-salary -->
+
+  <div class="container-fluid">
+    <div class="container job-best-salary">
+      <div class="row">
+        <div class="col-md-12 job-board2-wrap-header job-best-salary-header">
+          <h3><i class="fa fa-briefcase pr-2"></i> Top các công ty đang có nhu cầu tuyển dụng cao nhất </h3>
+        </div>
+      </div>
+      <div class="row job-best-salary">
+        <div class="col-md-4 job-over-item" *ngFor="let p of ListTopCompany">
+          <div class="job-inner-over-item">
+            <a>
+              <div class="thumbnail">
+                <img src="{{p.avatar}}" alt="company logo image">
+              </div>
+              <div class="content" style="float: right">
+                <div class="job-name">
+                  {{p.short_name}}
+                </div>
+                <a class="company">
+                  Tổng số nhân viên tuyển dụng: {{p.sum_quantity}}
+                </a>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) job-best-salary -->
+
+<!-- (end) job-best-salary -->
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="home-ads">
+          <a>
+            <img src="../../../assets/img/hna2.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<p-toast position="top-left" key="tl"></p-toast>
+<p-toast position="top-center" key="tc"></p-toast>
+<p-toast position="bottom-center" key="bc"></p-toast>
+
+<!-- news -->
+
+<div class="container-fluid">
+  <div class="container news-wrapper">
+    <div class="row">
+      <div class="col-md-12 news-wrapper-head">
+        Tư vấn nghề nghiệp từ HR Insider
+      </div>
+      <div class="col-md-4 col-sm-12 col-12 news-item">
+        <div class="news-item-inner">
+          <a
+            href="https://www.vietnamworks.com/hrinsider/5-thoi-diem-doanh-nghiep-khong-duoc-buoc-nguoi-lao-dong-thoi-viec.html">
+            <div class="news-thumb" style="background-image: url(../../../assets/img/news1.jpg);"></div>
+          </a>
+          <div class="news-details">
+            <div class="tags">
+              <a
+                href="https://www.vietnamworks.com/hrinsider/5-thoi-diem-doanh-nghiep-khong-duoc-buoc-nguoi-lao-dong-thoi-viec.html">Quyền
+                lợi nhân viên</a>
+            </div>
+            <div class="title">
+              <a
+                href="https://www.vietnamworks.com/hrinsider/5-thoi-diem-doanh-nghiep-khong-duoc-buoc-nguoi-lao-dong-thoi-viec.html">
+                5 thời điểm doanh nghiệp không được buộc người lao động thôi việc
+              </a>
+            </div>
+            <div class="meta">
+              Khi nào thì người sử dụng lao động được quyền đơn phương chấm dứt hợp đồng khi nào thì không? Cùng tham
+              khảo bài viết sau đây để hiểu thêm về quyền lợi của người lao động Việt Nam nhé!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-12 news-item">
+        <div class="news-item-inner">
+          <a href="https://www.vietnamworks.com/hrinsider/nhay-viec-va-nhung-con-so-ban-can-phai-luu-tam.html">
+            <div class="news-thumb" style="background-image: url(../../../assets/img/news2.jpg);"></div>
+          </a>
+          <div class="news-details">
+            <div class="tags">
+              <a href="https://www.vietnamworks.com/hrinsider/nhay-viec-va-nhung-con-so-ban-can-phai-luu-tam.html">Trước
+                khi nhảy việc</a>
+            </div>
+            <div class="title">
+              <a href="https://www.vietnamworks.com/hrinsider/nhay-viec-va-nhung-con-so-ban-can-phai-luu-tam.html">
+                Nhảy việc và những con số bạn cần phải lưu tâm
+              </a>
+            </div>
+            <div class="meta">
+              Dù bạn nhảy việc vì lý do gì cũng hãy cân nhắc đến những “con số” sau đây nhé!
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-12 news-item">
+        <div class="news-item-inner">
+          <a
+            href="https://www.vietnamworks.com/hrinsider/danh-gia-buoc-dem-can-thiet-trong-viec-dao-tao-huan-luyen-nhan-vien.html">
+            <div class="news-thumb" style="background-image: url(../../../assets/img/news3.png);"></div>
+          </a>
+          <div class="news-details">
+            <div class="tags">
+              <a
+                href="https://www.vietnamworks.com/hrinsider/danh-gia-buoc-dem-can-thiet-trong-viec-dao-tao-huan-luyen-nhan-vien.html">Huấn
+                luyện nhân sự</a>
+            </div>
+            <div class="title">
+              <a
+                href="https://www.vietnamworks.com/hrinsider/danh-gia-buoc-dem-can-thiet-trong-viec-dao-tao-huan-luyen-nhan-vien.html">
+                Đánh giá: bước đệm cần thiết trong việc đào tạo huấn luyện nhân viên
+              </a>
+            </div>
+            <div class="meta">
+              Cú sốc về kinh tế do Covid-19 gây ra đã khiến cho nhiều doanh nghiệp lớn và nhỏ phải nhanh chóng tìm ra
+              các phương án ứng phó tốc độ và hiệu quả để giải quyết bài toán về tìn...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) news -->
+
+<!-- job support -->
+
+<div class="container-fluid job-support-wrapper">
+  <div class="container-fluid job-support-wrap">
+    <div class="container job-support">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-12">
+          <ul class="spp-list">
+            <li>
+              <span><i class="fa fa-question-circle pr-2 icsp"></i>Hỗ trợ nhà tuyển dụng:</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone pr-2 icsp"></i>19006868</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12 col-12">
+          <div class="newsletter">
+            <span class="txt6">Đăng ký nhận bản tin việc làm</span>
+            <div class="input-group frm1">
+              <input type="text" placeholder="Nhập email của bạn" class="newsletter-email form-control">
+              <a href="#" class="input-group-addon"><i class="fa fa-lg fa-envelope-o colorb"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) job support -->
+
+<!-- footer -->
+
+<div class="container-fluid footer-wrap  clear-left clear-right">
+  <div class="container footer">
+    <div class="row">
+      <div class="col-md-4 col-sm-8 col-12">
+        <h2 class="footer-heading">
+          <span>Giới thiệu</span>
+        </h2>
+        <p class="footer-content">
+          Khám phá cách tốt nhất để tìm vệc làm IT qua Cổng thông tin việc làm phát triển nhanh nhất Việt Nam.
+        </p>
+        <ul class="footer-contact">
+          <li>
+            <a>
+              <i class="fa fa-phone fticn"></i> 19006868
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-envelope fticn"></i>
+              support@techjob.com
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-map-marker fticn"></i>
+              Số 23, Lô TT01, Hàm Nghi, Mỹ Đình, Hà Nội
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-12">
+        <h2 class="footer-heading">
+          <span>Ngôn ngữ nổi bật</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Java</a></li>
+          <li><a>Javascript</a></li>
+          <li><a>PHP</a></li>
+          <li><a>.NET</a></li>
+          <li><a>SQL Server</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Ngành nghề</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Quản lý dự án</a></li>
+          <li><a>Lập trình viên</a></li>
+          <li><a>Kiểm thử phần mềm</a></li>
+          <li><a>Kỹ sư cầu nối</a></li>
+          <li><a>Nhân sự</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Hình thức</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Nhân viên chính thức</a></li>
+          <li><a>Nhân viên bán thời gian</a></li>
+          <li><a>Freelancer</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-12 col-12">
+        <h2 class="footer-heading">
+          <span>Địa điểm</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Hà Nội</a></li>
+          <li><a>Đà Nẵng</a></li>
+          <li><a>Hồ Chí Minh</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid copyright-wrap">
+  <div class="container copyright">
+    <p class="copyright-content">
+      Copyright © 2023 <a> Tech<b>Job</b></a>. All Right Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- (end) footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/readmore.js"></script>
+<script type="text/javascript">
+  $('.catelog-list').readmore({
+    speed: 75,
+    maxHeight: 150,
+    moreLink: '<a href="#">Xem thêm<i class="fa fa-angle-down pl-2"></i></a>',
+    lessLink: '<a href="#">Rút gọn<i class="fa fa-angle-up pl-2"></i></a>'
+  });
+</script>
+
+<!-- Optional JavaScript -->
+
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jobdata.js"></script>
+
+<!-- Owl Stylesheets Javascript -->
+
+<script src="js/owlcarousel/owl.carousel.js"></script>
+
+<!-- Read More Plugin -->

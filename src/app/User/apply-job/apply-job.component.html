@@ -1,0 +1,32 @@
+<div class="frame" style="background: #1A67BD">
+  <h3 style="text-align: center;color:white">Upload file CV </h3>
+  <form [formGroup]="formUpCV" (ngSubmit)="applyJobUser()">
+    <div class="center">
+      <div class="title">
+        <h1>Drop file to upload</h1>
+      </div>
+      <div class="dropzone">
+        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" formControlName="cv"/>
+        <input type="file" class="upload-input" #imageInput accept="/images/*" (change)="processFile(imageInput)"/>
+        <!--    css upload   -->
+        <div *ngIf="selectedFile" class="img-preview-container">
+          <div class="img-preview{{selectedFile.status === 'fail' ? '-error' : ''}}"
+               [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+          </div>
+          <div *ngIf="selectedFile.pending" class="img-loading-overlay">
+            <div class="img-spinning-circle"></div>
+          </div>
+          <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> CV Uploaded Successfuly!</div>
+          <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> CV Upload Failed!</div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn" name="uploadbutton">Upload file</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+
+<!-- NO JS ADDED YET -->

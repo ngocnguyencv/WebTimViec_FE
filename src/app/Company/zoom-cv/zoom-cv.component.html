@@ -1,0 +1,181 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+      rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!-- select 2 css -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- main nav -->
+
+<div class="container-fluid fluid-nav another-page" style="background: #0B6CBC">
+  <div class="container cnt-tnar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light tjnav-bar">
+      <a class="nav-logo">
+        <img src="assets/img/techjobs_bgb.png">
+      </a>
+      <button class="navbar-toggler tnavbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fa fa-bars icn-res" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto tnav-left tn-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/homeCompany">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/informationCompany">Doanh Nghiệp</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/confirmCompany" id="navbarDropdown1" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Danh sách ứng tuyển
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 tnav-right tn-nav">
+          <li class="nav-item">
+            <a class="nav-link"></a>
+          </li>
+          <li class="nav-item">
+            <a>Xin chào :{{accountToken.email}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- (end) main nav-->
+
+<div class="clearfix">
+  <img src="{{listApplyJob.cv}}" width="1000px" height="900px" style="text-align: center;margin-left: 250px">
+</div>
+
+<!-- job support -->
+
+<div class="container-fluid job-support-wrapper">
+  <div class="container-fluid job-support-wrap">
+    <div class="container job-support">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-12">
+          <ul class="spp-list">
+            <li>
+              <span><i class="fa fa-question-circle pr-2 icsp"></i>Hỗ trợ nhà tuyển dụng:</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone pr-2 icsp"></i>0123.456.789</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12 col-12">
+          <div class="newsletter">
+            <span class="txt6"></span>
+            <div class="input-group frm1">
+              <input type="text" placeholder="Nhập thông tin cần tìm" class="newsletter-email form-control">
+              <button type="submit" class="input-group-addon">Tìm kiếm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) job support -->
+
+<!-- footer -->
+
+<div class="container-fluid footer-wrap  clear-left clear-right">
+  <div class="container footer">
+    <div class="row">
+      <div class="col-md-4 col-sm-8 col-12">
+        <h2 class="footer-heading">
+          <span>About</span>
+        </h2>
+        <p class="footer-content">
+          Discover the best way to find houses, condominiums, apartments and HDBs for sale and rent in Singapore with
+          JobsOnline, Singapore's Fastest Growing Jobs Portal.
+        </p>
+        <ul class="footer-contact">
+          <li>
+            <a href="#">
+              <i class="fa fa-phone fticn"></i> +123 456 7890
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-envelope fticn"></i>
+              hello@123.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-map-marker fticn"></i>
+              33 Xô Viết Nghệ Tĩnh, Đà Nẵng
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-12">
+        <h2 class="footer-heading">
+          <span>Ngôn ngữ nổi bật</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">Java</a></li>
+          <li><a href="#">Frontend</a></li>
+          <li><a href="#">SQL Server</a></li>
+          <li><a href="#">.NET</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Tất cả ngành nghề</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a href="#">Lập trình viên</a></li>
+          <li><a href="#">Kiểm thử phần mềm</a></li>
+          <li><a href="#">Kỹ sư cầu nối</a></li>
+          <li><a href="#">Quản lý dự án</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Tất cả hình thức</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a href="#">Nhân viên chính thức</a></li>
+          <li><a href="#">Nhân viên bán thời gian</a></li>
+          <li><a href="#">Freelancer</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-12 col-12">
+        <h2 class="footer-heading">
+          <span>Tất cả tỉnh thành</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a href="#">Hồ Chính Minh</a></li>
+          <li><a href="#">Hà Nội</a></li>
+          <li><a href="#">Đà Nẵng</a></li>
+          <li><a href="#">Buôn Ma Thuột</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid copyright-wrap">
+  <div class="container copyright">
+    <p class="copyright-content">
+      Copyright © 2020 <a href="#"> Tech<b>Job</b></a>. All Right Reserved.
+    </p>
+  </div>
+</footer>

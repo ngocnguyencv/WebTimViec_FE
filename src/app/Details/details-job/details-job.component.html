@@ -1,0 +1,380 @@
+<!-- main nav -->
+
+<div class="container-fluid fluid-nav another-page">
+  <div class="container cnt-tnar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light tjnav-bar">
+      <a href="#" routerLink="/home" class="nav-logo">
+        <img src="../../../assets/img/techjobs_bgw.png">
+      </a>
+      <button class="navbar-toggler tnavbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fa fa-bars icn-res" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto tnav-left tn-nav">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 tnav-right tn-nav">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Xin chào {{account.email}}</a>
+          </li>
+          <li class="nav-item dropdown">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- (end) main nav -->
+
+<div class="clearfix"></div>
+
+<!-- job detail header -->
+
+<div class="container-fluid job-detail-wrap">
+  <div class="container job-detail">
+    <div class="job-detail-header">
+      <div class="row">
+        <div class="col-md-2 col-sm-12 col-12">
+          <div class="job-detail-header-logo">
+            <a>
+              <img src="{{JobCompanyAccount.avatar}}" class="job-logo-ima" alt="job-logo">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-12">
+          <div class="job-detail-header-desc">
+            <div class="job-detail-header-title">
+              <a>{{JobCompanyAccount.title}}</a>
+            </div>
+            <div class="job-detail-header-company">
+              <a>{{JobCompanyAccount.short_name}}</a>
+            </div>
+            <div class="job-detail-header-de">
+              <ul>
+                <li><i class="fa fa-map-marker icn-jd"></i><span>{{JobCompanyAccount.address}}</span></li>
+                <li><i class="fa fa-usd icn-jd"></i><span>{{JobCompanyAccount.min}}$ - {{JobCompanyAccount.max}}$</span>
+                </li>
+                <li><i class="fa fa-calendar icn-jd"></i><span>{{JobCompanyAccount.expired_date}}</span></li>
+              </ul>
+            </div>
+            <div class="job-detail-header-tag">
+              <ul>
+                <li>
+                  <a>{{JobCompanyAccount.nameCategory}}</a>
+                </li>
+                <li>
+                  <a>{{JobCompanyAccount.nameLocation}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 col-12">
+          <div class="jd-header-wrap-right">
+            <div class="jd-center">
+              <a routerLink="/applyJob/{{JobCompanyAccount.idJob}}" class="btn btn-primary btn-apply">Nộp đơn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) job detail header -->
+
+<div class="clearfix"></div>
+
+<!-- Phần thân -->
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+
+      <!-- Main wrapper -->
+
+      <div class="col-md-8 col-sm-12 col-12 clear-left">
+        <div class="main-wrapper">
+          <h2 class="widget-title">
+            <span>Nội dung</span>
+          </h2>
+
+          <!-- content -->
+
+          <div class="welfare-wrap">
+            <div class="row">
+              <div class="welfare-list">
+                <ul>
+                  <li>
+                    <p><i class="fa fa-check-circle icn-welfare"></i>{{JobCompanyAccount.descriptionJob}}</p>
+                  </li>
+                  <li>
+                    <p><i class="fa fa-user icn-welfare"></i>Giới tính: {{JobCompanyAccount.gender}}</p>
+                  </li>
+                  <li>
+                    <p><i class="fa fa-check-circle icn-welfare"></i>Số lượng: {{JobCompanyAccount.quantity}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h2 class="widget-title">
+            <span>Mô tả công việc</span>
+          </h2>
+          <p><i class="fa fa-check-circle icn-welfare"></i>{{JobCompanyAccount.nameLocation}}</p>
+          <h2 class="widget-title">
+            <span>Thông tin liên hệ </span>
+          </h2>
+          <div class="welfare-wrap">
+            <div class="row">
+              <div class="welfare-list">
+                <ul>
+                  <li>
+                    <p><i class="fa fa-check-circle icn-welfare"></i>Số điện thoại: {{JobCompanyAccount.phone}}</p>
+                  </li>
+                  <li>
+                    <p><i class="fa fa-user icn-welfare"></i>Email: {{JobCompanyAccount.email}}</p>
+                  </li>
+                  <li>
+                    <p><i class="fa fa-check-circle icn-welfare"></i>Website: {{JobCompanyAccount.website}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+
+      <div class="col-md-4 col-sm-12 col-12 clear-right">
+        <div class="side-bar mb-3">
+          <h2 class="widget-title">
+            <span>Thông tin</span>
+          </h2>
+          <div class="job-info-wrap">
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Nơi làm việc:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.address}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Hình thức:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.nameCategory}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Lương:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.min}}$ - {{JobCompanyAccount.max}}$</span>
+                </div>
+              </div>
+            </div>
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Hạn nộp:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.expired_date}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Ngành nghề:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.codeJob}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="job-info-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <span class="ji-title">Kinh nghiệm:</span>
+                </div>
+                <div class="col-sm-8">
+                  <span class="ji-main">{{JobCompanyAccount.exp_year}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="side-bar mb-3">
+          <h2 class="widget-title">
+            <span>Giới thiệu công ty</span>
+          </h2>
+          <div class="company-intro">
+            <a>
+              <img src="{{JobCompanyAccount.avatar}}" class="job-logo-ima" alt="job-logo">
+            </a>
+          </div>
+          <h2 class="company-intro-name">{{JobCompanyAccount.nameAcc}}</h2>
+          <ul class="job-add">
+            <li>
+              <i class="fa fa-map-marker ja-icn"></i>
+              <span>Trụ sở: {{JobCompanyAccount.address}}</span>
+            </li>
+            <li>
+              <i class="fa fa-bar-chart ja-icn"></i>
+              <span>Quy mô công ty: {{JobCompanyAccount.number_of_employees}} người</span>
+            </li>
+          </ul>
+          <div class="wrap-comp-info mb-2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) Phần thân -->
+
+<!-- job support -->
+
+<div class="container-fluid job-support-wrapper">
+  <div class="container-fluid job-support-wrap">
+    <div class="container job-support">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-12">
+          <ul class="spp-list">
+            <li>
+              <span><i class="fa fa-question-circle pr-2 icsp"></i>Hỗ trợ nhà tuyển dụng:</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone pr-2 icsp"></i>19006868</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12 col-12">
+          <div class="newsletter">
+            <span class="txt6">Đăng ký nhận bản tin việc làm</span>
+            <div class="input-group frm1">
+              <input type="text" placeholder="Nhập email của bạn" class="newsletter-email form-control">
+              <a href="#" class="input-group-addon"><i class="fa fa-lg fa-envelope-o colorb"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (end) job support -->
+
+<!-- footer -->
+
+<div class="container-fluid footer-wrap  clear-left clear-right">
+  <div class="container footer">
+    <div class="row">
+      <div class="col-md-4 col-sm-8 col-12">
+        <h2 class="footer-heading">
+          <span>Giới thiệu</span>
+        </h2>
+        <p class="footer-content">
+          Khám phá cách tốt nhất để tìm vệc làm IT qua Cổng thông tin việc làm phát triển nhanh nhất Việt Nam.
+        </p>
+        <ul class="footer-contact">
+          <li>
+            <a>
+              <i class="fa fa-phone fticn"></i> 19006868
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-envelope fticn"></i>
+              support@techjob.com
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-map-marker fticn"></i>
+              Số 23, Lô TT01, Hàm Nghi, Mỹ Đình, Hà Nội
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-12">
+        <h2 class="footer-heading">
+          <span>Ngôn ngữ nổi bật</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Java</a></li>
+          <li><a>Javascript</a></li>
+          <li><a>PHP</a></li>
+          <li><a>.NET</a></li>
+          <li><a>SQL Server</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Ngành nghề</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Quản lý dự án</a></li>
+          <li><a>Lập trình viên</a></li>
+          <li><a>Kiểm thử phần mềm</a></li>
+          <li><a>Kỹ sư cầu nối</a></li>
+          <li><a>Nhân sự</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 col-12">
+        <h2 class="footer-heading">
+          <span>Hình thức</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Nhân viên chính thức</a></li>
+          <li><a>Nhân viên bán thời gian</a></li>
+          <li><a>Freelancer</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-12 col-12">
+        <h2 class="footer-heading">
+          <span>Địa điểm</span>
+        </h2>
+        <ul class="footer-list">
+          <li><a>Hà Nội</a></li>
+          <li><a>Đà Nẵng</a></li>
+          <li><a>Hồ Chí Minh</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid copyright-wrap">
+  <div class="container copyright">
+    <p class="copyright-content">
+      Copyright © 2023 <a> Tech<b>Job</b></a>. All Right Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- (end) footer -->
+
+<!-- Read More Plugin -->
